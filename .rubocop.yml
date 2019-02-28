@@ -1,5 +1,8 @@
 Style/MethodCallWithoutArgsParentheses:
   Enabled: false
 
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
 Style/Documentation:
   Enabled: false
