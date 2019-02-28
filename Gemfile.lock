@@ -3,7 +3,10 @@ GEM
   specs:
     ast (2.4.0)
     jaro_winkler (1.5.2)
+    metaclass (0.0.4)
     minitest (5.11.3)
+    mocha (1.8.0)
+      metaclass (~> 0.0.1)
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
@@ -29,6 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
+  mocha
   rake
   rubocop
   subcommand
