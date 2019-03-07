@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'subcommand'
 gem 'zeitwerk'
+gem 'sqlite3'
 
 group :development, :test do
   gem 'minitest'

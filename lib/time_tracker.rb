@@ -2,12 +2,15 @@
 
 require 'zeitwerk'
 require 'subcommand'
+require 'sqlite3'
 
 class CustomInflector < Zeitwerk::Inflector
   def camelize(basename, _abspath)
     case basename
     when 'cli'
       'CLI'
+    when 'session_dao'
+      'SessionDAO'
     else
       super
     end
