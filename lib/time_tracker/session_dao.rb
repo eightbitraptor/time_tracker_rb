@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'fileutils'
 
 module TimeTracker
@@ -62,7 +64,7 @@ module TimeTracker
       sessions = sessions_from_result_set(result_set)
 
       if sessions.length > 1
-        fail SessionAccessError, 'More than one active session in progress'
+        raise SessionAccessError, 'More than one active session in progress'
       end
 
       sessions.first
