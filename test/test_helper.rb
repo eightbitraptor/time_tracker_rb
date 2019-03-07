@@ -40,3 +40,6 @@ Minitest::Reporters.use!(
 require 'time_tracker'
 
 require 'mocha/minitest'
+
+Mocha::Configuration.prevent(:stubbing_non_existent_method)
+
