@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'subcommand'
+gem 'zeitwerk'
 
 group :development, :test do
   gem 'minitest'
