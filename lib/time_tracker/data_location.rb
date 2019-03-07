@@ -3,9 +3,9 @@
 require 'rbconfig'
 
 module TimeTracker
-  BrokenConfig = Class.new(StandardError)
-
   class DataLocation
+    BrokenConfig = Class.new(StandardError)
+
     class << self
       def data_file
         new.data_file

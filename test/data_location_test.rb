@@ -10,7 +10,7 @@ module TimeTracker
         .with('host_os')
         .raises(KeyError)
 
-      assert_raises TimeTracker::BrokenConfig do
+      assert_raises DataLocation::BrokenConfig do
         DataLocation.data_file
       end
     end
