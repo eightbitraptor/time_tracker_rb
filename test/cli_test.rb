@@ -4,11 +4,19 @@ require 'test_helper'
 
 module TimeTracker
   class CLITest < Minitest::Test
+    def setup
+      @fake_session_manager = mock()
+
+      SessionManager
+        .stubs(:new)
+        .returns(@fake_session_manager)
+    end
+
     def test__cli_has_start_command
       ARGV << 'start'
       subject = TimeTracker::CLI.new
 
-      subject.expects(:start)
+      @fake_session_manager.expects(:start_session)
       subject.parse
     end
 
@@ -16,7 +24,7 @@ module TimeTracker
       ARGV << 'stop'
       subject = TimeTracker::CLI.new
 
-      subject.expects(:stop)
+      @fake_session_manager.expects(:stop_active_session)
       subject.parse
     end
 

@@ -32,17 +32,13 @@ module TimeTracker
       {
         start: {
           desc: 'Start a new tracking session',
-          method: method(:start),
+          method: SessionManager.method(:start_session),
         },
         stop: {
           desc: 'Stop the currently active session',
-          method: method(:stop),
+          method: SessionManager.method(:stop_active_session),
         },
       }
     end
-
-    def start; end
-
-    def stop; end
   end
 end
