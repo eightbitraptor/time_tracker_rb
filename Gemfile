@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 gem 'subcommand'
 
 group :development, :test do
-  gem 'rake'
   gem 'minitest'
+  gem 'minitest-reporters'
   gem 'mocha'
+  gem 'rake'
   gem 'rubocop'
 end
